@@ -23,16 +23,17 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    -- add your plugins here
-    {'nvim-telescope/telescope.nvim'},
-    {"williamboman/mason.nvim"},
-    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-    {'neovim/nvim-lspconfig'},
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'hrsh7th/nvim-cmp'},
-    {'L3MON4D3/LuaSnip'},
-    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-    {'mbbill/undotree'}
+	    -- add your plugins here
+	    {'nvim-telescope/telescope.nvim'},
+	    {"williamboman/mason.nvim"},
+	    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+	    {'neovim/nvim-lspconfig'},
+	    {'hrsh7th/cmp-nvim-lsp'},
+	    {'hrsh7th/nvim-cmp'},
+	    {'L3MON4D3/LuaSnip'},
+	    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+	    {'mbbill/undotree'},
+	    {'jpalardy/vim-slime'}
     },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
@@ -88,3 +89,5 @@ vim.opt.undofile = true
 -- writing features: spellcheck etc
 vim.keymap.set('n', '<leader>r', ':setlocal spell! spelllang=en_us<CR>',{noremap = true})
 
+--slime config
+vim.g.slime_target = "tmux"
